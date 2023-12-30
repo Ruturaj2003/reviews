@@ -349,3 +349,6 @@ main {
 .next-btn:hover {
   color: var(--primary-500);
 }
+.btn-hip:hover {
+  background-color: rgb(19, 184, 244);
+}

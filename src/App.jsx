@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaQuoteRight,
+  FaRandom,
+} from 'react-icons/fa';
 import people from './data';
 
 const App = () => {
@@ -18,6 +23,7 @@ const App = () => {
     let temp = (index - 1 + people.length) % people.length;
     setIndex(temp);
   }
+  const randomChoice = () => {};
 
   return (
     <main>
@@ -39,6 +45,11 @@ const App = () => {
             <FaChevronRight></FaChevronRight>
           </button>
         </div>
+        <button className="btn btn-hip" onClick={randomChoice}>
+          <FaRandom
+            style={{ color: 'black', fontSize: '1.2rem', width: '2.9rem' }}
+          ></FaRandom>
+        </button>
       </article>
     </main>
   );
