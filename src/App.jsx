@@ -23,7 +23,13 @@ const App = () => {
     let temp = (index - 1 + people.length) % people.length;
     setIndex(temp);
   }
-  const randomChoice = () => {};
+  const randomChoice = () => {
+    let rand = Math.floor(Math.random() * people.length);
+    if (rand === index) {
+      rand = (index + 1) % people.length;
+    }
+    setIndex(rand);
+  };
 
   return (
     <main>
