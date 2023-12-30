@@ -9,8 +9,10 @@ const App = () => {
 
   console.log(people.length);
   function nextPerson() {
-    let temp = (index + 1) % people.length;
-    setIndex(temp);
+    setIndex((currentIndex) => {
+      const newIndex = (currentIndex + 1) % people.length;
+      return newIndex;
+    });
   }
   function prevPerson() {
     let temp = (index - 1 + people.length) % people.length;
